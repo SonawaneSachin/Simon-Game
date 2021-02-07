@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     if (!isGameStarted) {
       $(".start-button").hide(1000);
-      nextSequence();
+      setTimeout(nextSequence, 1000);
       isGameStarted = true;
     }
   }
