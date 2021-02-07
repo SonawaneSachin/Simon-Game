@@ -12,11 +12,13 @@ $(document).ready(function() {
   };
 
   $(document).on("keypress", startGame);
+  $(".start-button").on("click", startGame);
   $(".btn").on("click", handleUserSelection);
 
   function startGame() {
 
     if (!isGameStarted) {
+      $(".start-button").hide(1000);
       nextSequence();
       isGameStarted = true;
     }
@@ -68,6 +70,8 @@ $(document).ready(function() {
         indexToBeVerified = 0;
         levelNumber = 1;
         expected = [];
+
+        $(".start-button").show(1000);
       }
 
     }
